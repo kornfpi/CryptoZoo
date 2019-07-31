@@ -5,7 +5,7 @@
     <ContentPage.Content>
 
         <!-- Main Stack -->
-        <StackLayout BackgroundColor="White" Margin="3" Padding="3" VerticalOptions="StartAndExpand">
+        <StackLayout  BackgroundColor="White" Margin="3" Padding="3" VerticalOptions="StartAndExpand">
 
             <Label Text="CryptoZoo Mystic App" IsVisible="True" HorizontalTextAlignment="Center" FontSize="Large"/>
 
