@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Drawing;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -122,13 +122,13 @@ namespace Cryot2
                 {
                     if (i <= index)
                     {
-                        inputs[i].BackgroundColor = Color.FromRgb(255, 0, 0);
+                        inputs[i].BackgroundColor = System.Drawing.Color.FromArgb(192,255,0,0);
                         inputs[i].Text = i == index ? (i + 1).ToString() : "";
                         //inputs[i].Margin = i < 6 ? new Thickness(0, 0, 1, 0) : inputs[i].Margin;
                     }
                     else
                     {
-                        inputs[i].BackgroundColor = Color.FromRgb(128, 128, 128);
+                        inputs[i].BackgroundColor = System.Drawing.Color.FromArgb(192, 0, 0, 0); ;
                         inputs[i].Text = "";
                         //inputs[i].Margin = i < 6 ? new Thickness(0, 0, 1, 0) : inputs[i].Margin;
                     }
@@ -244,7 +244,7 @@ namespace Cryot2
             (sender as Button).IsEnabled = true;
             Device.BeginInvokeOnMainThread(() =>
             {
-                imageFlip.Source = mysticImage.Source;
+                MysticBackgroundImage.Source = mysticImage.Source;
             });
         }
 

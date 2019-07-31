@@ -4,146 +4,151 @@
              x:Class="Cryot2.Page1">
     <ContentPage.Content>
 
-        <!-- Main Stack -->
-        <StackLayout  BackgroundColor="White" Margin="3" Padding="3" VerticalOptions="StartAndExpand">
+        <Grid > <!-- For Background Image Only -->
+            <Image x:Name="MysticBackgroundImage" Source="up_arrow.png" Aspect="AspectFit" />
+            <!-- Place here the rest of the layout for the page. -->
+        
+            <!-- Main Stack -->
+            <StackLayout  BackgroundColor="Transparent" Margin="3" Padding="3" VerticalOptions="StartAndExpand">
 
-            <Label Text="CryptoZoo Mystic App" IsVisible="True" HorizontalTextAlignment="Center" FontSize="Large"/>
+                <Label Text="CryptoZoo Mystic App"  BackgroundColor ="Transparent" IsVisible="True" HorizontalTextAlignment="Center" FontSize="Large"/>
 
-            <!--Create Inputs for Power -->
-            <StackLayout Margin="0" Padding="0" BackgroundColor="White">
-                <Grid BackgroundColor="White" HorizontalOptions="FillAndExpand" ColumnSpacing="0" Margin="0" Padding="0" RowSpacing="0">
-                    <!--Main Grid-->
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Margin="0" BackgroundColor="Black" TextColor ="White" HorizontalTextAlignment="Start"  VerticalTextAlignment="Center"  Text="Mystic Power Level"/>
-                    <Button Grid.Row="1" Grid.Column="0" Margin="0,0,1,0" Padding="0" x:Name="pb1" Text="" CornerRadius ="0" BindingContext="p0" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                    <Button Grid.Row="1" Grid.Column="1" Margin="0,0,1,0" Padding="0" x:Name="pb2" Text="" CornerRadius ="0" BindingContext="p1" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                    <Button Grid.Row="1" Grid.Column="2" Margin="0,0,1,0" Padding="0" x:Name="pb3" Text="" CornerRadius ="0" BindingContext="p2" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                    <Button Grid.Row="1" Grid.Column="3" Margin="0,0,1,0" Padding="0" x:Name="pb4" Text="" CornerRadius ="0" BindingContext="p3" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                    <Button Grid.Row="1" Grid.Column="4" Margin="0,0,1,0" Padding="0" x:Name="pb5" Text="" CornerRadius ="0" BindingContext="p4" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                    <Button Grid.Row="1" Grid.Column="5" Margin="0,0,0,0" Padding="0" x:Name="pb6" Text="" CornerRadius ="0" BindingContext="p5" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                </Grid>
-                <Label x:Name="note_power" Text="" IsVisible="False"/>
-            </StackLayout>
+                <!--Create Inputs for Power -->
+                <StackLayout Margin="0" Padding="0" BackgroundColor="Transparent">
+                    <Grid BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" ColumnSpacing="0" Margin="0" Padding="0" RowSpacing="0">
+                        <!--Main Grid-->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Margin="0" BackgroundColor="#000000" TextColor ="White" HorizontalTextAlignment="Start"  VerticalTextAlignment="Center"  Text="   Mystic Power Level"/>
+                        <Button Grid.Row="1" Grid.Column="0" Margin="0,0,1,0" Padding="0" x:Name="pb1" Text="" CornerRadius ="0" BindingContext="p0" BackgroundColor="#85000000" Clicked="bar_button_clicked"/>
+                        <Button Grid.Row="1" Grid.Column="1" Margin="0,0,1,0" Padding="0" x:Name="pb2" Text="" CornerRadius ="0" BindingContext="p1" BackgroundColor="#75000000" Clicked="bar_button_clicked"/>
+                        <Button Grid.Row="1" Grid.Column="2" Margin="0,0,1,0" Padding="0" x:Name="pb3" Text="" CornerRadius ="0" BindingContext="p2" BackgroundColor="#75000000" Clicked="bar_button_clicked"/>
+                        <Button Grid.Row="1" Grid.Column="3" Margin="0,0,1,0" Padding="0" x:Name="pb4" Text="" CornerRadius ="0" BindingContext="p3" BackgroundColor="#75000000" Clicked="bar_button_clicked"/>
+                        <Button Grid.Row="1" Grid.Column="4" Margin="0,0,1,0" Padding="0" x:Name="pb5" Text="" CornerRadius ="0" BindingContext="p4" BackgroundColor="#75000000" Clicked="bar_button_clicked"/>
+                        <Button Grid.Row="1" Grid.Column="5" Margin="0,0,0,0" Padding="0" x:Name="pb6" Text="" CornerRadius ="0" BindingContext="p5" BackgroundColor="#75000000" Clicked="bar_button_clicked"/>
+                    </Grid>
+                    <Label x:Name="note_power" Text="" IsVisible="False"/>
+                </StackLayout>
 
-            <!--Create Inputs for Health -->
-            <StackLayout Margin="0" Padding="0" BackgroundColor="White">
-                <Grid BackgroundColor="White" HorizontalOptions="FillAndExpand" ColumnSpacing="0" Margin="0" Padding="0" RowSpacing="0">
-                    <!--Main Grid-->
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Margin="0" BackgroundColor="Black" TextColor ="White" HorizontalTextAlignment="Start"  VerticalTextAlignment="Center"  Text="Mystic Health Level"/>
-                    <Button Grid.Row="1" Grid.Column="0" Margin="0,0,1,0" Padding="0" x:Name="hb1" Text="" CornerRadius ="0" BindingContext="h0" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                    <Button Grid.Row="1" Grid.Column="1" Margin="0,0,1,0" Padding="0" x:Name="hb2" Text="" CornerRadius ="0" BindingContext="h1" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                    <Button Grid.Row="1" Grid.Column="2" Margin="0,0,1,0" Padding="0" x:Name="hb3" Text="" CornerRadius ="0" BindingContext="h2" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                    <Button Grid.Row="1" Grid.Column="3" Margin="0,0,1,0" Padding="0" x:Name="hb4" Text="" CornerRadius ="0" BindingContext="h3" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                    <Button Grid.Row="1" Grid.Column="4" Margin="0,0,1,0" Padding="0" x:Name="hb5" Text="" CornerRadius ="0" BindingContext="h4" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                    <Button Grid.Row="1" Grid.Column="5" Margin="0,0,0,0" Padding="0" x:Name="hb6" Text="" CornerRadius ="0" BindingContext="h5" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                </Grid>
-                <Label x:Name="note_health" Text="" IsVisible="False"/>
-            </StackLayout>
+                <!--Create Inputs for Health -->
+                <StackLayout Margin="0" Padding="0" BackgroundColor="Transparent">
+                    <Grid BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" ColumnSpacing="0" Margin="0" Padding="0" RowSpacing="0">
+                        <!--Main Grid-->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Margin="0" BackgroundColor="Black" TextColor ="White" HorizontalTextAlignment="Start"  VerticalTextAlignment="Center"  Text="   Mystic Health Level"/>
+                        <Button Grid.Row="1" Grid.Column="0" Margin="0,0,1,0" Padding="0" x:Name="hb1" Text="" CornerRadius ="0" BindingContext="h0" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
+                        <Button Grid.Row="1" Grid.Column="1" Margin="0,0,1,0" Padding="0" x:Name="hb2" Text="" CornerRadius ="0" BindingContext="h1" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
+                        <Button Grid.Row="1" Grid.Column="2" Margin="0,0,1,0" Padding="0" x:Name="hb3" Text="" CornerRadius ="0" BindingContext="h2" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
+                        <Button Grid.Row="1" Grid.Column="3" Margin="0,0,1,0" Padding="0" x:Name="hb4" Text="" CornerRadius ="0" BindingContext="h3" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
+                        <Button Grid.Row="1" Grid.Column="4" Margin="0,0,1,0" Padding="0" x:Name="hb5" Text="" CornerRadius ="0" BindingContext="h4" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
+                        <Button Grid.Row="1" Grid.Column="5" Margin="0,0,0,0" Padding="0" x:Name="hb6" Text="" CornerRadius ="0" BindingContext="h5" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
+                    </Grid>
+                    <Label x:Name="note_health" Text="" IsVisible="False"/>
+                </StackLayout>
 
-            <!--Create Inputs for Speed -->
-            <StackLayout Margin="0" Padding="0" BackgroundColor="White">
-                <Grid BackgroundColor="White" HorizontalOptions="FillAndExpand" ColumnSpacing="0" Margin="0" Padding="0" RowSpacing="0">
-                    <!--Main Grid-->
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="0" BackgroundColor="Black" TextColor ="White" HorizontalTextAlignment="Start"  VerticalTextAlignment="Center"  Text="Mystic Speed Level"/>
-                    <Button Grid.Row="1" Grid.Column="0" Margin="0,0,1,0" Padding="0" x:Name="sb1" Text="" CornerRadius ="0" BindingContext="s0" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                    <Button Grid.Row="1" Grid.Column="1" Margin="0,0,1,0" Padding="0" x:Name="sb2" Text="" CornerRadius ="0" BindingContext="s1" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                    <Button Grid.Row="1" Grid.Column="2" Margin="0,0,1,0" Padding="0" x:Name="sb3" Text="" CornerRadius ="0" BindingContext="s2" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                    <Button Grid.Row="1" Grid.Column="3" Margin="0,0,0,0" Padding="0" x:Name="sb4" Text="" CornerRadius ="0" BindingContext="s3" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
-                </Grid>
-                <Label x:Name="note_speed" Text="" IsVisible="False"/>
-            </StackLayout>
+                <!--Create Inputs for Speed -->
+                <StackLayout Margin="0" Padding="0" BackgroundColor="White">
+                    <Grid BackgroundColor="White" HorizontalOptions="FillAndExpand" ColumnSpacing="0" Margin="0" Padding="0" RowSpacing="0">
+                        <!--Main Grid-->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="0" BackgroundColor="Black" TextColor ="White" HorizontalTextAlignment="Start"  VerticalTextAlignment="Center"  Text="Mystic Speed Level"/>
+                        <Button Grid.Row="1" Grid.Column="0" Margin="0,0,1,0" Padding="0" x:Name="sb1" Text="" CornerRadius ="0" BindingContext="s0" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
+                        <Button Grid.Row="1" Grid.Column="1" Margin="0,0,1,0" Padding="0" x:Name="sb2" Text="" CornerRadius ="0" BindingContext="s1" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
+                        <Button Grid.Row="1" Grid.Column="2" Margin="0,0,1,0" Padding="0" x:Name="sb3" Text="" CornerRadius ="0" BindingContext="s2" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
+                        <Button Grid.Row="1" Grid.Column="3" Margin="0,0,0,0" Padding="0" x:Name="sb4" Text="" CornerRadius ="0" BindingContext="s3" BackgroundColor="Gray" Clicked="bar_button_clicked"/>
+                    </Grid>
+                    <Label x:Name="note_speed" Text="" IsVisible="False"/>
+                </StackLayout>
 
-            <!-- Buffs -->
+                <!-- Buffs -->
 
-            <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
             
-                <!-- Jewels -->
-                <Image Source="crystal_75x75.png" />
-                <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="0" Margin="0" Padding="0" RowSpacing="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <ImageButton x:Name ="ju" Grid.Row="0" Source="up_arrow.png" BindingContext="j1" Pressed="change_arrow_red"  Released="change_arrow_black" Clicked="increment_button_clicked"/>
-                <Label Grid.Row="1" x:Name="note_jewels" Text="0" IsVisible="True" HorizontalTextAlignment="Center" />
-                <ImageButton x:Name ="jd" Grid.Row="2" Source="down_arrow.png" BindingContext ="j0"  Pressed="change_arrow_red"  Released="change_arrow_black" Clicked="increment_button_clicked" />
-                </Grid>
+                    <!-- Jewels -->
+                    <Image Source="crystal_75x75.png" />
+                    <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="0" Margin="0" Padding="0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <ImageButton x:Name ="ju" Grid.Row="0" Source="up_arrow.png" BindingContext="j1" Pressed="change_arrow_red"  Released="change_arrow_black" Clicked="increment_button_clicked"/>
+                    <Label Grid.Row="1" x:Name="note_jewels" Text="0" IsVisible="True" HorizontalTextAlignment="Center" />
+                    <ImageButton x:Name ="jd" Grid.Row="2" Source="down_arrow.png" BindingContext ="j0"  Pressed="change_arrow_red"  Released="change_arrow_black" Clicked="increment_button_clicked" />
+                    </Grid>
 
-                <!-- Wands -->
-                <Image Source="wand_75x75.png" />
-                <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="0" Margin="0" Padding="0" RowSpacing="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <ImageButton x:Name ="wu" Grid.Row="0" Source="up_arrow.png" BindingContext="w1" Pressed="change_arrow_red"  Released="change_arrow_black" Clicked="increment_button_clicked"/>
-                    <Label Grid.Row="1" x:Name="note_wands" Text="0" IsVisible="True" HorizontalTextAlignment="Center" />
-                <ImageButton x:Name ="wd" Grid.Row="2" Source="down_arrow.png" BindingContext ="w0"  Pressed="change_arrow_red"  Released="change_arrow_black" Clicked="increment_button_clicked" />
-                </Grid>
+                    <!-- Wands -->
+                    <Image Source="wand_75x75.png" />
+                    <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="0" Margin="0" Padding="0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <ImageButton x:Name ="wu" Grid.Row="0" Source="up_arrow.png" BindingContext="w1" Pressed="change_arrow_red"  Released="change_arrow_black" Clicked="increment_button_clicked"/>
+                        <Label Grid.Row="1" x:Name="note_wands" Text="0" IsVisible="True" HorizontalTextAlignment="Center" />
+                    <ImageButton x:Name ="wd" Grid.Row="2" Source="down_arrow.png" BindingContext ="w0"  Pressed="change_arrow_red"  Released="change_arrow_black" Clicked="increment_button_clicked" />
+                    </Grid>
 
-                <!-- Potions -->
-                <Image Source="potion_75x75.png" />
-                <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="0" Margin="0" Padding="0" RowSpacing="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <ImageButton x:Name ="pu" Grid.Row="0" Source="up_arrow.png" BindingContext="p1" Pressed="change_arrow_red"  Released="change_arrow_black" Clicked="increment_button_clicked"/>
-                <Label Grid.Row="1" x:Name="note_potions" Text="0" IsVisible="True" HorizontalTextAlignment="Center" />
-                <ImageButton x:Name ="pd" Grid.Row="2" Source="down_arrow.png" BindingContext ="p0"  Pressed="change_arrow_red"  Released="change_arrow_black" Clicked="increment_button_clicked" />
-                </Grid>
+                    <!-- Potions -->
+                    <Image Source="potion_75x75.png" />
+                    <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="0" Margin="0" Padding="0" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <ImageButton x:Name ="pu" Grid.Row="0" Source="up_arrow.png" BindingContext="p1" Pressed="change_arrow_red"  Released="change_arrow_black" Clicked="increment_button_clicked"/>
+                    <Label Grid.Row="1" x:Name="note_potions" Text="0" IsVisible="True" HorizontalTextAlignment="Center" />
+                    <ImageButton x:Name ="pd" Grid.Row="2" Source="down_arrow.png" BindingContext ="p0"  Pressed="change_arrow_red"  Released="change_arrow_black" Clicked="increment_button_clicked" />
+                    </Grid>
 
-            </StackLayout><!-- End Buff Inputs -->
+                </StackLayout><!-- End Buff Inputs -->
 
-            <Button Clicked="OnPickPhotoButtonClicked" Text="Change Photo" />
-            <Image x:Name="imageFlip" Source="up_arrow.png" />
+                <Button Clicked="OnPickPhotoButtonClicked" Text="Change Photo" />
 
-        </StackLayout><!-- End Main Stack -->
+            </StackLayout><!-- End Main Stack -->
+
+        </Grid >
 
     </ContentPage.Content>
 </ContentPage>
