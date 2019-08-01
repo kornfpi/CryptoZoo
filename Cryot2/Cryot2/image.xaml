@@ -3,7 +3,26 @@
              x:Class="Cryot2.image"
              Padding="5"
              Title="Slider Transforms Page">
-    <Grid>
+
+    <StackLayout Padding="0" Margin="0">
+
+        <!-- Mystic Image Display -->
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" Padding="0" Margin="0">
+            <Image x:Name="label" Source="up_arrow.png" Aspect="AspectFit" /> <!-- Background Image -->
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" Margin="0"> <!-- Inner Grid for Whitespace -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" />
+                <Image Grid.Row="1" x:Name="overlay" Source="mask.png" Aspect="AspectFit" /> <!-- Masking Image -->
+                <Grid Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="0" Padding="0" />
+            </Grid>
+        </Grid>
+
+
+    <Grid BackgroundColor="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
@@ -19,16 +38,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- Scaled and rotated Label -->
-        <Grid>
-            <Image x:Name="label"
-               Source="up_arrow.png"
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
-            <Image x:Name="overlay"
-               Source="mask.png"
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
-        </Grid>
+
 
 
         <!-- Slider and identifying Label for Scale -->
@@ -59,8 +69,8 @@
         <Slider x:Name="rotationXSlider"
                 BindingContext="{x:Reference label}"
                 Grid.Row="3" Grid.Column="0"
-                Maximum="360"
-                Value="{Binding RotationX, Mode=OneWayToSource}" />
+                Maximum="100"
+                Value="{Binding AnchorX, Mode=OneWayToSource}" />
 
         <Label BindingContext="{x:Reference rotationXSlider}"
                Text="{Binding Value, StringFormat='RotationX = {0:F0}'}"
@@ -82,4 +92,5 @@
         <Button Grid.Row="5" Grid.ColumnSpan="2" Clicked="OnPickPhotoButtonClicked" Text="Change Photo" />
         
     </Grid>
+        </StackLayout>
 </ContentPage>
