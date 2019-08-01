@@ -31,8 +31,8 @@
                         </Grid.ColumnDefinitions>
                         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Margin="0" BackgroundColor="#000000" TextColor ="White" HorizontalTextAlignment="Start"  VerticalTextAlignment="Center"  Text="   Mystic Power Level"/>
                         <Button Grid.Row="1" Grid.Column="0" Margin="0,0,1,0" Padding="0" x:Name="pb1" Text="" CornerRadius ="0" BindingContext="p0" BackgroundColor="#85000000" Clicked="bar_button_clicked"/>
-                        <Button Grid.Row="1" Grid.Column="1" Margin="0,0,1,0" Padding="0" x:Name="pb2" Text="" CornerRadius ="0" BindingContext="p1" BackgroundColor="#75000000" Clicked="bar_button_clicked"/>
-                        <Button Grid.Row="1" Grid.Column="2" Margin="0,0,1,0" Padding="0" x:Name="pb3" Text="" CornerRadius ="0" BindingContext="p2" BackgroundColor="#75000000" Clicked="bar_button_clicked"/>
+                        <Button Grid.Row="1" Grid.Column="1" Margin="0,0,1,0" Padding="0" x:Name="pb2" Text="" CornerRadius ="0" BindingContext="p1" BackgroundColor="#85000000" Clicked="bar_button_clicked"/>
+                        <Button Grid.Row="1" Grid.Column="2" Margin="0,0,1,0" Padding="0" x:Name="pb3" Text="" CornerRadius ="0" BindingContext="p2" BackgroundColor="#95000000" Clicked="bar_button_clicked"/>
                         <Button Grid.Row="1" Grid.Column="3" Margin="0,0,1,0" Padding="0" x:Name="pb4" Text="" CornerRadius ="0" BindingContext="p3" BackgroundColor="#75000000" Clicked="bar_button_clicked"/>
                         <Button Grid.Row="1" Grid.Column="4" Margin="0,0,1,0" Padding="0" x:Name="pb5" Text="" CornerRadius ="0" BindingContext="p4" BackgroundColor="#75000000" Clicked="bar_button_clicked"/>
                         <Button Grid.Row="1" Grid.Column="5" Margin="0,0,0,0" Padding="0" x:Name="pb6" Text="" CornerRadius ="0" BindingContext="p5" BackgroundColor="#75000000" Clicked="bar_button_clicked"/>
