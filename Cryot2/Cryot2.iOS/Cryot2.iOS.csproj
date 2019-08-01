@@ -171,4 +171,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\up_arrow_red.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mask.png" />
+  </ItemGroup>
 </Project>

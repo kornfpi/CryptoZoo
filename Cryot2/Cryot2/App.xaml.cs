@@ -13,7 +13,7 @@ namespace Cryot2
             InitializeComponent();
 
 
-            MainPage = new Page1();
+            MainPage = new image();
         }
 
         protected override void OnStart()

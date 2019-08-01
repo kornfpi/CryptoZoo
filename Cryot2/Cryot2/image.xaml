@@ -1,0 +1,85 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cryot2.image"
+             Padding="5"
+             Title="Slider Transforms Page">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Scaled and rotated Label -->
+        <Grid>
+            <Image x:Name="label"
+               Source="up_arrow.png"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+            <Image x:Name="overlay"
+               Source="mask.png"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        </Grid>
+
+
+        <!-- Slider and identifying Label for Scale -->
+        <Slider x:Name="scaleSlider"
+                BindingContext="{x:Reference label}"
+                Grid.Row="1" Grid.Column="0"
+                Maximum="10"
+                Value="{Binding Scale, Mode=TwoWay}" />
+
+        <Label BindingContext="{x:Reference scaleSlider}"
+               Text="{Binding Value, StringFormat='Scale = {0:F1}'}"
+               Grid.Row="1" Grid.Column="1"
+               VerticalTextAlignment="Center" />
+
+        <!-- Slider and identifying Label for Rotation -->
+        <Slider x:Name="rotationSlider"
+                BindingContext="{x:Reference label}"
+                Grid.Row="2" Grid.Column="0"
+                Maximum="360"
+                Value="{Binding Rotation, Mode=OneWayToSource}" />
+
+        <Label BindingContext="{x:Reference rotationSlider}"
+               Text="{Binding Value, StringFormat='Rotation = {0:F0}'}"
+               Grid.Row="2" Grid.Column="1"
+               VerticalTextAlignment="Center" />
+
+        <!-- Slider and identifying Label for RotationX -->
+        <Slider x:Name="rotationXSlider"
+                BindingContext="{x:Reference label}"
+                Grid.Row="3" Grid.Column="0"
+                Maximum="360"
+                Value="{Binding RotationX, Mode=OneWayToSource}" />
+
+        <Label BindingContext="{x:Reference rotationXSlider}"
+               Text="{Binding Value, StringFormat='RotationX = {0:F0}'}"
+               Grid.Row="3" Grid.Column="1"
+               VerticalTextAlignment="Center" />
+
+        <!-- Slider and identifying Label for RotationY -->
+        <Slider x:Name="rotationYSlider"
+                BindingContext="{x:Reference label}"
+                Grid.Row="4" Grid.Column="0"
+                Maximum="360"
+                Value="{Binding RotationY, Mode=OneWayToSource}" />
+
+        <Label BindingContext="{x:Reference rotationYSlider}"
+               Text="{Binding Value, StringFormat='RotationY = {0:F0}'}"
+               Grid.Row="4" Grid.Column="1"
+               VerticalTextAlignment="Center" />
+
+        <Button Grid.Row="5" Grid.ColumnSpan="2" Clicked="OnPickPhotoButtonClicked" Text="Change Photo" />
+        
+    </Grid>
+</ContentPage>
